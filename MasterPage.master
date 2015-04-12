@@ -1,0 +1,190 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Pagina Web</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .nuevoEstilo1
+        {
+            font-family: "Comic Sans MS";
+            font-size: x-large;
+            font-weight: normal;
+            font-style: normal;
+            background-color: #C0C0C0;
+            vertical-align: top;
+            width: 200px;
+            height: 300px;
+        }
+        .nuevoEstilo2
+        {
+            background-color: #808000;
+            padding: inherit;
+            margin: auto;
+            border-bottom-style: outset;
+            border-bottom-width: thick;
+            border-left-style: hidden;
+            height: 45px;
+        }
+        .style2
+        {
+            width: 92px;
+            height: 23px;
+            font-weight: bold;
+        }
+        .style3
+        {
+            width: 87px;
+            height: 23px;
+            font-weight: bold;
+        }
+        .style4
+        {
+            width: 74px;
+            height: 23px;
+            font-weight: bold;
+        }
+        .style5
+        {
+            height: 23px;
+        }
+        .style6
+        {
+            width: 76px;
+            height: 23px;
+            font-weight: bold;
+        }
+        .nuevoEstilo3
+        {
+            vertical-align: top;
+        }
+        .nuevoEstilo4
+        {
+            vertical-align: top;
+        }
+        .nuevoEstilo5
+        {
+            background-image: url('/WebSite2/Imagenes/fondo verde.png');
+        }
+        .nuevoEstilo6
+        {
+            background-image: url('/WebSite2/Imagenes/fondo verde.png');
+            background-position: center center;
+            background-repeat: repeat-y;
+        }
+        .nuevoEstilo7
+        {
+            background-image: url('/WebSite2/Imagenes/fondo-huellas.jpg');
+        }
+        .nuevoEstilo8
+        {
+            background-image: url('/WebSite2/Imagenes/fondo-huellas.jpg');
+        }
+        .nuevoEstilo9
+        {
+            background-image: url('/WebSite2/Imagenes/fondo-huellas.jpg');
+        }
+        .style7
+        {
+            width: 235px;
+            height: 250px;
+        }
+        .style13
+        {
+            height: 23px;
+            font-weight: bold;
+        }
+        .nuevoEstilo10
+        {
+            border-style: dashed;
+            background-color: #000000;
+        }
+        .nuevoEstilo11
+        {
+            background-color: #00FF00;
+            background-image: inherit;
+        }
+        .nuevoEstilo12
+        {
+            background-color: #000000;
+        }
+        .nuevoEstilo13
+        {
+            background-color: #000000;
+            background-image: url('/WebSite2/Imagenes/mn_fondo.png');
+        }
+        .style14
+        {
+            background-color: #808000;
+            background-image: url('/WebSite2/Imagenes/mn_fondo.png');
+            height: auto;
+            top: auto;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center top;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table class="style1">
+        <tr class="nuevoEstilo6">
+            <td class="nuevoEstilo2">
+            </td>
+        </tr>
+        </table>
+    <table class="style1">
+        <tr class="nuevoEstilo9">
+            <td class="style5" rowspan="2">
+                <img alt="" class="style7" src="Imagenes/logo_clinica.jpg" /></td>
+            <td class="style14" colspan="6">
+                </td>
+        </tr>
+        <tr class="nuevoEstilo9">
+            <td class="style2">
+                Inicio</td>
+            <td class="style3">
+                Nosotros</td>
+            <td class="style4">
+                Medicos</td>
+            <td class="style6">
+                Pet Shop</td>
+            <td class="style13">
+                Login</td>
+            <td class="style13">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="nuevoEstilo1">
+                Menu<asp:TreeView 
+                    ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" 
+                    ImageSet="Arrows">
+                    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" 
+                        HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                    <ParentNodeStyle Font-Bold="False" />
+                    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" 
+                        HorizontalPadding="0px" VerticalPadding="0px" />
+                </asp:TreeView>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+            </td>
+            <td colspan="6" class="nuevoEstilo9">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr class="nuevoEstilo8">
+            <td colspan="7" class="style5">
+                Copyright © 2015, TeraByte Solutions E.I.R.L.</td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
